@@ -80,9 +80,7 @@ jobs:
   section_08_deploy_app_container_via_railway:
     <<: *defaults
     steps:
-      - setup_remote_docker:
-          # Specify a valid Docker version compatible with your resource class
-          version: 23.0.0  # Change this to a compatible version based on CircleCI's supported versions
+      - setup_remote_docker
       - checkout:
           path: ~/project/
       - node/install:
